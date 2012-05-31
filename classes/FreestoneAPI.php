@@ -8,11 +8,13 @@
 
 	class FreestoneAPI { 
 
+		private $baseUrl = "https://freestoneapi.com/";
 		private $user = "username";		//your user name string here (e.g. "fs-user")
 		private $pw = "password";		//your password string here (e.g. "9njduru7uieequbuswFGz5rYgetep5gb")
 
 		private $debug = false;
 
+		public function __construct($url = null, $user = null, $pw = null) {
 
 			// Override default values if they are provided in the constructor
 			if ($url) $this->baseUrl = $url;
